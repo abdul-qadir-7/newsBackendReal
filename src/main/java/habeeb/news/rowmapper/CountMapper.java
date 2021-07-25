@@ -1,0 +1,16 @@
+package habeeb.news.rowmapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class CountMapper implements RowMapper{
+
+	@Override
+	public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
+		int q = rs.getInt("quantity");
+		return q;
+	}
+
+}
