@@ -1,5 +1,6 @@
 package habeeb.news.dao;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ public class BookmarkDao {
 		// TODO Auto-generated method stub
 		String sql ="select ne.id, ne.heading, ne.description, ne.image from news as ne, user_bookmark as bo where bo.newsPk=ne.id and bo.userPk=?";
 		return template.query(sql,new Object[] {userPk}, new BookmarkMapper());
+		
 //		return new List<News>;
 	}
 
